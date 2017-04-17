@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>FlappyBird - by tsLabs</title>
+    <style>*{margin:0;padding: 0;background: black;}</style>
+</head>
+<body>
+    <div id="game"></div>
+    <script src="phaser.js"></script>
+    <script src="boot.js"></script>
+    <script src="menu.js"></script>
+    <script src="juego.js"></script>
+    <script src="gameover.js"></script>
+    <script>
+        var game = new Phaser.Game(370, 550, Phaser.CANVAS, 'game');
+        game.state.add('Boot', Boot);
+        game.state.add('Menu', Menu);
+        game.state.add('Juego', Juego);
+        game.state.add('Game_Over', Game_Over);
+        game.state.start('Boot');
+        var musicaBg;
+    </script>
+</body>
+</html>
